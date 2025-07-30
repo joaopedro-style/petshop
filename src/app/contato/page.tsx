@@ -1,3 +1,4 @@
+// src/app/contato.tsx
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

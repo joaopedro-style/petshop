@@ -1,3 +1,4 @@
+// src/app/layout.tsx
 export default function Home() {
   return (
     <section>
