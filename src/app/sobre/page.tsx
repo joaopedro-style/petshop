@@ -1,4 +1,5 @@
 // src/app/sobre.tsx
+import Colaboradores from "@/components/Colaboradores";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,6 +16,8 @@ export default function Sobre() {
         laudantium odio! Quia sequi corporis iste repellat, recusandae explicabo
         numquam.
       </p>
+
+      <Colaboradores />
     </section>
   );
 }
