@@ -1,6 +1,6 @@
 // src/app/produtos.tsx
 import type { Metadata } from "next";
-import estilos from "./Produtos.module.css";
+import estilos from "./produtos.module.css";
 
 export const metadata: Metadata = {
   title: "Produtos | PetShop",
