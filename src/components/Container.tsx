@@ -1,4 +1,4 @@
-// src/componentes/Container.tsx
+// src/components/Container.tsx
 import estilos from "./Container.module.css";
 
 type ContainerProps = {

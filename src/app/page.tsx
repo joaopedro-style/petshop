@@ -1,4 +1,4 @@
-// src/app/layout.tsx
+// src/app/page.tsx
 import estilos from "./page.module.css";
 export default function Home() {
   return (

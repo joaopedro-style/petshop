@@ -1,4 +1,4 @@
-// src/app/contato.tsx
+// src/app/contato/page.tsx
 import type { Metadata } from "next";
 import estilos from "./contato.module.css";
 import Container from "@/components/Container";

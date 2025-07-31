@@ -1,4 +1,4 @@
-// src/app/sobre.tsx
+// src/app/sobre/page.tsx
 import type { Metadata } from "next";
 import estilos from "./sobre.module.css";
 import Container from "@/components/Container";

@@ -1,4 +1,4 @@
-// src/app/produtos.tsx
+// src/app/produtos/page.tsx
 import type { Metadata } from "next";
 import estilos from "./produtos.module.css";
 import Container from "@/components/Container";
