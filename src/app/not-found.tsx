@@ -2,6 +2,7 @@
 import Link from "next/link";
 import estilos from "./not-found.module.css";
 import { Metadata } from "next";
+import Container from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Página não encontrada | PetShop",
@@ -13,15 +14,17 @@ export default function Pagina404() {
     <section className={estilos.conteudo}>
       <h2>Ops! Página não encontrada!</h2>
 
-      <div className={estilos.imagem404}>
-        <img
-          src="/images/404.svg"
-          alt="Cachorro com cara triste e nariz vermelho com o símbolo de interrogação"
-        />
-        <p>
-          <Link href="/">Volta para a página inicial</Link>
-        </p>
-      </div>
+      <Container>
+        <div className={estilos.imagem404}>
+          <img
+            src="/images/404.svg"
+            alt="Cachorro com cara triste e nariz vermelho com o símbolo de interrogação"
+          />
+          <p>
+            <Link href="/">Volta para a página inicial</Link>
+          </p>
+        </div>
+      </Container>
     </section>
   );
 }
