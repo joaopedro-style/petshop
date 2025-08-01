@@ -2,6 +2,15 @@
 
 Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase (Baas - Back-End as a Service).
 
+## 04_melhorias-nas-paginas-e-componente-container
+
+- Adição de conteúdo às pages (Sobre, Produtos, Contato)
+- Utilização de imagem SVG na page Not Found
+- Criação e aplicação do componente Container usando children
+- Desativação do compilador Turbopack para evitar bugs de cache (em especila quando a alguns módulos CSS)
+
+---
+
 ## 03_componentes-cabecalho-menu-e-modulos-de-estilo
 
 - Criação de componentes `Cabecalho` e `Menu`
