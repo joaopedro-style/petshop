@@ -7,9 +7,7 @@ type DetalhePostProps = {
   params: Promise<{ id: string }>;
 };
 
-export async function generateMetadata({ params }: DetalhePostProps) {
-  const { id } = await params;
-
+async function buscarPostPorId(id: string): Promise<Post> {
   const resposta = await fetch(`http://localhost:2112/posts/${id}`, {
     next: { revalidate: 0 },
   });
@@ -19,6 +17,12 @@ export async function generateMetadata({ params }: DetalhePostProps) {
   }
 
   const post: Post = await resposta.json();
+  return post;
+}
+
+export async function generateMetadata({ params }: DetalhePostProps) {
+  const { id } = await params;
+  const post = await buscarPostPorId(id);
 
   return {
     title: post.titulo + " | PetShop",
@@ -28,16 +32,8 @@ export async function generateMetadata({ params }: DetalhePostProps) {
 
 export default async function DetalhePost({ params }: DetalhePostProps) {
   const { id } = await params;
+  const post: Post = await buscarPostPorId(id);
 
-  const resposta = await fetch(`http://localhost:2112/posts/${id}`, {
-    next: { revalidate: 0 },
-  });
-
-  if (!resposta.ok) {
-    throw new Error("Erro ao buscar o post: " + resposta.statusText);
-  }
-
-  const post: Post = await resposta.json();
   const { titulo, categoria, descricao } = post;
 
   return (
