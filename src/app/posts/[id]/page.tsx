@@ -2,6 +2,7 @@
 import estilos from "./detalhe-post.module.css";
 import Container from "@/components/Container";
 import { Post } from "@/types/Post";
+import { notFound } from "next/navigation";
 
 type DetalhePostProps = {
   params: Promise<{ id: string }>;
@@ -12,8 +13,9 @@ async function buscarPostPorId(id: string): Promise<Post> {
     next: { revalidate: 0 },
   });
 
-  if (!resposta.ok) {
-    throw new Error("Erro ao buscar o post: " + resposta.statusText);
+  if (resposta.status === 404) {
+    // Buscar a page not-found.tsx automaticamente em caso de erro 404
+    notFound();
   }
 
   const post: Post = await resposta.json();
