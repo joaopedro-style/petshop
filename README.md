@@ -6,6 +6,7 @@ Projeto de uma aplicação web SPA usando Next.js, Typescript e Supabase (Baas -
 
 - Instalação e configuração do `json-server` como dependência de desenvolvedor: Para instalar: `npm install json-server --save-dev`
 - Utilização do `fetch` com `async/await` na página Home para consumir os posts da fake-api
+- Exclusão do array de posts
 - Substituição da array fixo de posts por dados da fake-api
 - Configuração de rota dinâmica com carregamento de dados a partir de parâmetros da rota
 - Uso de `Promise` como tipo para a prop `params`
