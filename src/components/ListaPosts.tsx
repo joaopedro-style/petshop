@@ -9,6 +9,10 @@ type ListaPostsProps = {
 };
 
 export default function ListaPosts({ posts }: ListaPostsProps) {
+  // Gerando um novo array de categorias usando map e garantindo que não há repetição de categorias usando spread e new Set.
+  const categorias = [...new Set(posts.map((post) => post.categoria))];
+  console.log(categorias);
+
   return (
     <>
       <FiltroCategorias />
