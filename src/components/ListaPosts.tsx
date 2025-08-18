@@ -20,6 +20,7 @@ export default function ListaPosts({ posts }: ListaPostsProps) {
   /* Definindo o state com tipos null (quando não há categoria selecionada) ou string (que é tipo para nomes/textos referentes às categorias). Passamos null entre parênteses indicando que por padrão não há categoria selecionada. */
   const [categoriaAtiva, setCategoriaAtiva] = useState<null | string>(null);
 
+  /* Gerando uma nova lista de posts podendo ter o filtro de categoria aplicado. Caso contrário, retorna todos os posts. */
   const postsFiltrados = categoriaAtiva
     ? posts.filter((post) => post.categoria === categoriaAtiva)
     : posts;
@@ -30,6 +31,7 @@ export default function ListaPosts({ posts }: ListaPostsProps) {
     <>
       <FiltroCategorias />
 
+      {/* Caso não tenha posts, renderiza Semposts */}
       {postsFiltrados.length === 0 && <SemPosts />}
 
       <div className={estilos.posts}>
