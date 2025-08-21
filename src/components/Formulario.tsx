@@ -1,8 +1,21 @@
+"use client";
+
+import { useState } from "react";
 import estilos from "./Formulario.module.css";
 
 export default function Formulario() {
+  // Estados para os textos da mensagens
+  const [mensagem, setMensagem] = useState("");
+
+  // Estados para o tipo de mensagem: sucesso ou erro
+  const [tipomensagem, setTipoMensagem] = useState<"sucesso" | "erro" | "">("");
+
+  async function processarDados(dadosForm: FormData) {
+    alert("Iniciando o processamento...");
+  }
+
   return (
-    <form action="" className={estilos.formulario}>
+    <form action={processarDados} className={estilos.formulario}>
       <div className={estilos.campo}>
         <label htmlFor="nome">Nome</label>
         <input
