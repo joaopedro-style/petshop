@@ -1,6 +1,6 @@
 // src/app/produtos/page.tsx
 import type { Metadata } from "next";
-import estilos from "./produtos.module.css";
+import estilos from "./Produtos.module.css";
 import Container from "@/components/Container";
 
 export const metadata: Metadata = {
