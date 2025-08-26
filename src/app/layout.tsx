@@ -29,6 +29,13 @@ export const metadata: Metadata = {
       url: "https://github.com/joaopedro-style",
     },
   ],
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "petshop",
+    /* Se tivéssemos icones especificos para dispositivos Apples, você também colocaria aqui. */
+  },
 };
 
 export default function RootLayout({
